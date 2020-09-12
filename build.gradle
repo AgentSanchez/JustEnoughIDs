@@ -18,11 +18,15 @@ apply plugin: "org.spongepowered.mixin"
 
 repositories {
     maven { url "http://repo.spongepowered.org/maven" }
-    maven { url "http://www.dimdev.org/maven" }
     ivy {
         url "https://google.com/404"
         ivyPattern("https://google.com/404") // Workaround for https://github.com/gradle/gradle/issues/4107
         artifactPattern("https://media.forgecdn.net/files/[organisation]/[module]/[revision].[ext]")
+    }
+
+    maven {
+        name = 'forge'
+        url = 'https://files.minecraftforge.net/maven'
     }
 }
 
